@@ -13,23 +13,25 @@ import kotlin.random.Random
 fun ej1()
 {
     print("Escriba la nota -> ")
-    var nota:Int = readLine()!!.toInt() //Hecho para recibir la variable desde el teclado
+    val nota:Int = readLine()!!.toInt() //Hecho para recibir la variable desde el teclado
     //Se podría cambiar para que pudiese recibir valores flotantes
 
     when (nota)
     {
-        in 0..4 -> print("Suspenso")
-        in 5..6 -> print("Aprobado")
-        in 7..8 -> print("Notable")
-        in 9..10 -> print("Sobresaliente")
-        else -> print("El valor introducido no es correcto")
+        in 0..4 -> println("Suspenso")
+        in 5..6 -> println("Aprobado")
+        in 7..8 -> println("Notable")
+        in 9..10 -> println("Sobresaliente")
+        else -> println("El valor introducido no es correcto")
     }
+    println("-------------------")
 }
 
 //Ejercicio 2.- Array de 20 numero aleatorios y realizar distintas transformaciones en el
 fun ej2() {
-    var arrayRandom = MutableList(20) { Random.nextInt(0, 200) }
+    val arrayRandom = MutableList(20) { Random.nextInt(0, 200) }
 
+    print("Valores pares de la lista -> ")
     arrayRandom.forEach() // Se imprime en pantalla los valores pares
     {
         if (it % 2 == 0)
